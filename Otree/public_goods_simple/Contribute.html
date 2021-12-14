@@ -1,0 +1,27 @@
+
+
+{% block title %}
+    Experimento "Proyecto comunitario" Ronda {{player.round_number}}
+{% endblock %}
+
+{% block content %}
+    {% formfields %}
+
+<p>Queda {{participant.recurso}} unidades de recurso</p>
+
+    {% next_button %}
+
+{% endblock %}
+
+{% block scripts %}
+
+<script>
+setTimeout(
+    function () {
+        alert("Recuerde que otros jugadores le esperan. Si tarda mucho puede perjudicarlos, no demore por favor");
+    },
+    60*1000
+    );
+</script>
+
+{% endblock %}
