@@ -1,0 +1,25 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+{% block title %}
+    PRÁCTICA (3 rondas)
+
+{% endblock %}
+
+{% block content %}
+<p>En este apartado participará en 3 rondas de práctica antes de pasar al la primera etapa del
+experimento.</p>
+    {% next_button %}
+
+{% endblock %}
+
+{% block scripts %}
+
+<script>
+setTimeout(
+    function () {
+        alert("Time has run out. Please make your decision.");
+    },
+    60*1000 </script>
+
+);
+{% endblock %}

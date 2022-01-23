@@ -1,0 +1,24 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+{% block title %}
+    EXPERIMENTO: ETAPA 2 (10 rondas)
+
+{% endblock %}
+
+{% block content %}
+<p>En el siguiente apartado se dará inicio a la etapa 2 del Experimento.</p>
+    {% next_button %}
+
+{% endblock %}
+
+{% block scripts %}
+
+<script>
+setTimeout(
+    function () {
+        alert("Time has run out. Please make your decision.");
+    },
+    60*1000 </script>
+
+);
+{% endblock %}

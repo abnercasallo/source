@@ -1,0 +1,30 @@
+
+
+{% block title %}
+    Experimento "Proyecto Pesca Comunitaria" Ronda {{player.round_number}}
+{% endblock %}
+
+{% block content %}
+    {% formfields %}
+<style>
+p {font-size:20px; text-align:justify; line-height:35px}
+</style>
+<p>
+</p>
+
+    {% next_button %}
+
+{% endblock %}
+
+{% block scripts %}
+
+<script>
+setTimeout(
+    function () {
+        alert("Recuerde que otros jugadores le esperan. No demore por favor");
+    },
+    60*1000
+    );
+</script>
+
+{% endblock %}

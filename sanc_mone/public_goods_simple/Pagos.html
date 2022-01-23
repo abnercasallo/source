@@ -1,0 +1,32 @@
+{% extends "global/Page.html" %}
+{% load otree %}
+
+{% block title %}
+    RESULTADO FINAL EXPERIMENTO "PROYECTO COMUNITARIO"
+{% endblock %}
+
+{% block content %}
+
+
+<table style="width:100%">
+{##player.control##}
+   {###group.random_player_id###}
+    {##player.id_in_group##}
+    {###player.contribution ###}
+
+{###group.random_num###}
+
+    La presente ronda {{player.monitor}} y
+    {{player.exceso}} se le aplica la sanción.
+
+    <td>Entonces, su puntaje final es  {{player.pago_final}}</td>
+
+
+</table>
+
+
+
+
+
+{% next_button %}
+{% endblock %}

@@ -1,0 +1,23 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+{% block title %}
+    PROYECTO DE PESCA COMUNITARIA (4 rondas)
+{% endblock %}
+
+{% block content %}
+
+    {% next_button %}
+
+{% endblock %}
+
+{% block scripts %}
+
+<script>
+setTimeout(
+    function () {
+        alert("Time has run out. Please make your decision.");
+    },
+    60*1000 </script>
+
+);
+{% endblock %}

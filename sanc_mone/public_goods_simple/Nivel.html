@@ -1,0 +1,25 @@
+{% extends "global/Page.html" %}
+{% load otree %}
+
+{% block title %}
+    Nivel de recursos para la siguiente ronda
+{% endblock %}
+
+{% block content %}
+<style>
+p {font-size:20px; text-align:justify; line-height:35px}
+</style>
+
+<td> {{ if group.total_contribution <= 20 }} Si hay una siguiente ronda,
+    el nivel de recurso para la siguiente ronda sería <b>Alto </b>
+    {{ else }} Si hay una siguiente ronda, el nivel de recurso para la siguiente ronda sería <b>Bajo</b>
+    {{ endif }}</td></tr>
+
+
+    <p></p>
+
+    {% next_button %}
+
+{% endblock %}
+
+

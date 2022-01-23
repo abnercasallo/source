@@ -1,0 +1,35 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+{% block title %}
+    TABLA PARA EL CÁLCULO DE LOS PUNTAJES
+{% endblock %}
+
+{% block content %}
+
+    <p>
+        El puntaje obtenido por pada jugador en cada ronda será de la siguiente manera:
+</p>
+<p>
+
+<ul><li>Si en la ronda el stock del recurso es ALTO, se utilizará la tabla de puntajes verde: https://bit.ly/32GNY8B.
+</li>
+<li>Si en la ronda el stock del recurso es BAJO, se utilizará la tabla de puntajes roja: https://bit.ly/3ExXmJ2</li>
+
+</ul>
+{% next_button %}
+</p>
+
+
+{% endblock %}
+
+{% block scripts %}
+
+<script>
+setTimeout(
+    function () {
+        alert("Time has run out. Please make your decision.");
+    },
+    60*1000 </script>
+
+);
+{% endblock %}

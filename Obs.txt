@@ -1,0 +1,63 @@
+-Si pongo 20 en la misma ronda, entonces cada vez se seteará como "alto" PARA CADA RONDA SIEMPRE.
+-Si el nivel lo pongo como participant, el problema es que se acumulan los pagos de todas las rondas.
+ Por lo tanto, cuando muestre la ventana de resultados le saldrá el acumulado de las rondas.
+Lo que yo quiero es simplemente que se jale el resultado específicamente de la ronda anterior, salvo en
+la primera ronda.
+
+Alternativas:
+- Crear un app diferente para LA RONDA 1 y luego automatizar desde la ronda 2 hacia adelante(quizás salga, quizás no)
+- Evitar poner en la primera ventana el nivel de recursos, solamente saldría en la ventana de resultados
+ (¿el investigador estará de acuerdo?)
+
+
+----CONTRIBUYEN---VENTANA DE PAGOS----AVISO DE LO QUE QUEDA PARA LA SIGUIENTE RONDA
+
+APLICATIVO1:  CONSENTI. INF. INSTRUCCIO... TIEMPO...
+APLICATIVO 2: CONTRIBU RONDA1--- VENTANA RESULTADOS DE RONDA 1---- VENTANA DEL NIVEL DE RECURSOS RESULTADO DE LA RONDA 1 (REDACCIÓN)
+              CONTRIBU RONDA2--- VENTANA RESULTADOS DE RONDA 2---- VENTANA DEL NIVEL DE RECURSOS RESULTADO DE LA RONDA 2
+......
+              CONTRIBU RONDA3--- VENTANA RESULTADOS DE RONDA 3---- VENTANA DEL NIVEL DE RECURSOS RESULTADO DE LA RONDA 3
+
+
+
+####¿LA RONDA DE TEST LO HAGO APARTE O JUNTO A LA LÍNEA BASE? SI LO HAGO JUNTO LAS INSTRUCCIONES SE PUEDEN HACER
+TEDIOSAS, SALVO QUE LO HAGA LUEGO DE LAS INSTRUCCIONES
+
+-Saqué "Nivel" para evitar la confunsión de la ultima ronda dejando el nivel bajo/alto 
+-Pendiente de Carlos (Orsee)
+- Cálculo del puntaje obtenido en cada Ronda: AÑADIR INSTRUCCIONES EN EL TÍTULO
+- Colores Y VERDE/ROJO (EN MAYÚSCULA)
+- En lugar de "Finalmente:" ver si se pone "Efectos en la ronda siguiente" al mismo nivel del segundo subtítulo/titulo (conversarlo con Carlos).
+- Poner enlace en la ventana de cálculo...
+- TIEMPO X TIEMPO MÁXIMO DE CADA RONDA (extracción por cada ronda...)
+- SIEMPRE PONER INSTRUCCIONES EN EL TÍTULO, INCLUYENDO EL TIEMPO.
+- Avisar las 3 rondas de práctica en las instrucciones.
+- "	El nivel de Recurso para la siguiente ronda es Bajo" una línea abajo y, "Desde la siguiente ronda en negrita"
+    y "BAJO" (EN MAYÚSCULA)
+- Ronda pre-exper... X Práctica: Ronda..
+- (entre 0 y 10 unidades) X (entre 1 y 10 unidades)
+- EXPERIMENTO: ETAPA 1 (10 rondas), DISCUTIRLO AL FINAL 
+- Su puntaje ... X Su puntaje de la ronda... es 43,70
+- RESULTADO FINAL EXPERIMENTO "PROYECTO COMUNITARIO" X PUNTAJE DE LA RONDA ...
+- Programar el puntaje acumulado al final de la etapa 1 e intentar rankear a los jugadores V.S 
+Avisar por micrófono al final de la etapa1 (se procesaría manualmente los resultados)
+- "Su puntaje es 86,00" y "Siguiente" más separado.
+- Si hay una siguiente ronda, "El nivel de Recurso para la siguiente ronda sería Alto" (es X sería)
+- Poner número de ronda en todas las ventanas 
+- Sacar ventana de pagos en la ETAPA 1 (SOLO IRÍA EN LA ETAPA 2)
+- PENSAR ALGORITMO EN R PARA SUMA AUTOMÁTICA DE PUNTAJES DE TODAS LAS RONDAS
+
+--------------------------------------
+INSTRUCCIONES GENERAL
+INTRUCCIONES SOBRE EL CÁLCULO DEL PUNTAJE
+INSTRUCCIONES DE TIEMPO 
+----------------------------
+PRÁCTICA
+-------------------------
+EXPERIMENTO
+for player in players:
+if round>2:
+
+
+
+

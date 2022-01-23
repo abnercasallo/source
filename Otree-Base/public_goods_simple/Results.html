@@ -1,0 +1,40 @@
+{% extends "global/Page.html" %}
+{% load otree %}
+
+{% block title %}
+    Resultados Experimento "Proyecto Pesca Comunitaria" Ronda {{player.round_number}}
+{% endblock %}
+
+{% block content %}
+<style>
+p {font-size:20px; text-align:justify; line-height:35px}
+</style>
+
+<p>Los resultados de esta ronda son:</p>
+    <table class="table-condensed" style="width:500px; margin-top:20px;">
+        <tr><td>Extrajiste:</td><td>{{ player.contribution }}</td></tr>
+        <tr><td>Los otros participantes extrajeron:</td><td></td></tr>
+        {% for p in player.get_others_in_group %}
+            <tr><td></td><td>{{ p.contribution }}</td></tr>
+        {% endfor %}
+
+        <tr><td>Extracción total Total:</td><td>{{ group.total_contribution }}</td></tr>
+        <td>Por lo tanto, </td>
+         </table>
+       <br></br>
+
+        {{ if group.total_contribution <= 20 }} <b>Si hay una siguiente ronda,
+            el nivel de recurso para la siguiente ronda sería ALTO </b>  {{ else }}
+            <b>Si hay una siguiente ronda, el nivel de
+
+                o para la siguiente ronda sería BAJO</b>
+            {{ endif }}
+
+
+
+    <p></p>
+
+    {% next_button %}
+
+{% endblock %}
+

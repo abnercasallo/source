@@ -1,0 +1,27 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+{% block content %}
+<div class="card bg-light m-3">
+    <div class="card-body">
+
+ <style>
+p {font-size:20px; text-align:justify; line-height:35px}
+</style>
+
+    <h3>
+        Instrucciones: Tiempo máximo en cada ronda
+    </h3>
+
+        <ul>
+        <li>El tiempo para elegir cuántas unidades va a extraer en cada ronda es de 1 MINUTO. </li>
+        <li> Transcurrido el minuto, se asumirá que extrajo 0 unidades y pasará automáticamente
+        a la siguiente ventana.</li>
+        <li>Habrá un temporizador que podrá visualizar.  </li>
+
+        </ul>
+
+
+
+  {% next_button %}
+
+{% endblock %}

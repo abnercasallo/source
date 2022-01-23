@@ -1,0 +1,48 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+{% block content %}
+<div class="card bg-light m-3">
+    <div class="card-body">
+<style>
+p {font-size:20px; text-align:justify; line-height:35px}
+</style>
+
+    <h3>
+        ETAPA 2- Sanción monetaria
+
+    </h3>
+
+    <p>
+        <ul>
+             <li>Comprende de la ronda 11 a 20.</li>
+
+        <b>Instrucciones:</b>
+</ul>
+
+        <ul>
+            <li>Hay una regulación externa para la pesca.</li>
+             <li>No hay comunicación entre jugadores.</li>
+           <li>Cada jugador debe extraer solo 1 unidad del recurso pesquero.</li>
+            <li>Se realiza un monitoreo imperfecto de la siguiente manera:
+            <ul>
+                <li>Posibilidad de realizar un monitoreo con Probabilidad de 1/2.</li>
+                <li>Posibilidad de ser supervisado y verificar el nivel de su extracción con Probabilidad de 1/4.</li>
+                <li>Por tanto, la probabilidad de que haya monitoreo, sea supervisado y sancionado es de  1/8.</li>
+
+            </ul></li>
+            <li>Si hay monitoreo y su nivel de extracción es 1 unidad, no hay ninguna sanción monetaria.</li>
+            <li>Si hay monitoreo y se encuentra que el nivel de su extracción es mayor a 1 unidad, se le impondrá una sanción monetaria de 9.6 por cada unidad adicional por encima de lo establecido.</li>
+            <li>Finalmente, cada jugador toma su decisión de manera privada y confidencial.</li>
+        </ul>
+
+
+
+    </p>
+
+    </div>
+
+</div>
+
+  {% next_button %}
+
+{% endblock %}

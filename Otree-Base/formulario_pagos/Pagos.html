@@ -1,0 +1,35 @@
+{% extends "global/Page.html" %}
+{% load otree %}
+
+{% block title %}
+Enlace para el formulario para cobro de pagos
+{% endblock %}
+
+{% block content %}
+
+<div class="card bg-light instructions">
+    <div class="card-body">
+
+<br>
+Para proceder con el cobro de su pago, ingrese al enlace de abajo. Este enlace le redirigirá a un formulario
+        en el que brindará la información necesaria para efectuar la transferencia:
+<br><br>
+     <a target="_blank" href="https://forms.gle/pQkd6p4gMTrRGuk7A">https://forms.gle/pQkd6p4gMTrRGuk7A</a>
+
+<br><br>
+Además, deberá colocar su etiqueta de participante: <b>{{ participant.label }}</b>
+
+<br><br>
+Los datos que brinde en ese formulario no afectarán el monto de su
+pago.
+<br><br>
+Si tiene alguna consulta, escriba a este correo: leex@pucp.edu.pe,
+o llame al siguiente número: 991275051.
+<br><br>
+¡Gracias, nuevamente!
+<br><br>
+Equipo LEEX - PUCP
+
+    </div></div>
+
+{% endblock %}

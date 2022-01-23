@@ -1,0 +1,40 @@
+{% extends "global/Page.html" %}
+{% load otree %}
+
+{% block title %}
+    RESULTADO FINAL EXPERIMENTO "PROYECTO COMUNITARIO"
+{% endblock %}
+
+{% block content %}
+
+
+<table style="width:100%">
+  <tr>
+    <th>Ronda</th>
+    <th>Pago</th>
+  </tr>
+  <tr>
+    <td>Ronda 1</td>
+    <td>El pago fue {{paying_round1}} </td>
+  </tr>
+  <tr>
+    <td>Ronda 2</td>
+    <td>El pago fue {{paying_round2}}</td>
+  </tr>
+      <tr>
+    <td>Ronda 3</td>
+    <td>El pago fue {{paying_round3}} </td>
+  </tr>
+  <tr>
+    <td>Ronda 4</td>
+    <td>El pago fue {{paying_round4}}</td>
+  </tr>
+</table>
+
+
+
+    <p>
+        Se escogió la ronda 4 para tu pago: {{paying_round4 }}
+    </p>
+{% next_button %}
+{% endblock %}
