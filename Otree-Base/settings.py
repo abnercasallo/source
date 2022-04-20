@@ -1,6 +1,6 @@
 from os import environ
 
-PARTICIPANT_FIELDS = ['recurso', 'nivel', 'total_contribution']
+#PARTICIPANT_FIELDS = ['recurso', 'nivel', 'total_contribution']
 #SESSION_FIELDS = []
 
 SESSION_CONFIGS = [

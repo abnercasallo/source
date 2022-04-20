@@ -28,12 +28,6 @@ class Player(BasePlayer):
 
 # PAGES
 # PAGES
-class Inicio(Page):
-    @staticmethod
-    def before_next_page(player: Player, timeout_happened):
-        participant = player.participant
-        participant.recurso = 2000
-        participant.total_contribution= 0
 
 class instrucciones(Page):
     pass
@@ -62,4 +56,4 @@ class calculo(Page):
 class test(Page):
     pass
 
-page_sequence = [ instrucciones, calculo, instrucciones_time,test,]
+page_sequence = [ ConsentimientoInformado, agradecimiento, instrucciones,  calculo, instrucciones_time,test,]

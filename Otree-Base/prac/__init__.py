@@ -4,7 +4,7 @@ from otree.api import *
 
 class Constants(BaseConstants):
     name_in_url = 'prac'
-    players_per_group = 4   ###Hará un match automático entre dos jugadores, de tal forma que si uno falta solo afecta a su pareja, pero no a los otros
+    players_per_group = 4
     num_rounds = 3
     endowment = cu(100)
     multiplier = 1
@@ -15,10 +15,10 @@ class Subsession(BaseSubsession):
 
 
 class Group(BaseGroup):
-    total_contribution = models.CurrencyField(initial=0)
+    total_contribution = models.CurrencyField(initial=0) #En caso que no se llene nada tendrá 0 y no saldrá error por NaN
     individual_share = models.CurrencyField()
     other_contribution= models.CurrencyField(initial=0)
-    recurso= models.CurrencyField(initial=30)  #initial=0
+    recurso= models.CurrencyField(initial=30)
 
 
 class Player(BasePlayer):
@@ -41,11 +41,6 @@ def set_payoffs(group: Group):
     for p in players:
         group.recurso = group.recurso - group.total_contribution #En inicio ya se definió el valor inicial de recurso
 
-        """if player.round_number>1:
-             group.total_contribution=player.in_round(group.total_contribution - 1)"""
-
-        #Se hizo en un app aparte para que no afecte las cantidades de rondas.
-        #Sino se reiniciaría el monto cada vez que empieza una ronda nueva
 
 
 # PAGES
@@ -84,6 +79,3 @@ class Results(Page):
 
 
 page_sequence = [Contribute, ResultsWaitPage, Results] #ConsentimientoInformado, instrucciones,
-#Saqué "Nivel" para evitar la confunsión de la ultima ronda dejando el nivel bajo/alto
-###Por cada ResultsWaitPage se correrá la función
-### Templates: {{ if group.total_contribution <= 20 }} El nivel de Recurso es Alto {{ else }} El nivel de Recurso es Bajo {{ endif }}
